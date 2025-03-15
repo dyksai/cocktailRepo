@@ -1,0 +1,19 @@
+<div class="cocktail-container">
+  <h1>Cocktails</h1>
+  <div class="filters">
+    <button (click)="applyFilter('Alcoholic')">Alcoholic</button>
+    <button (click)="applyFilter('Non alcoholic')">Non-Alcoholic</button>
+  </div>
+  <div class="cocktail-list">
+    <div class="card" 
+      *ngFor="let cocktail of cocktails" 
+      [hidden]="filterType && cocktail.strAlcoholic !== filterType" 
+      [ngClass]="{'alcoholic': cocktail.strAlcoholic === 'Alcoholic', 'non-alcoholic': cocktail.strAlcoholic === 'Non alcoholic'}"
+      (click)="navigateToIngredients(cocktail.idDrink)">
+      <img [src]="cocktail.strDrinkThumb" alt="Cocktail Image">
+      <h2>{{ cocktail.strDrink }}</h2>
+      <p>{{ cocktail.strAlcoholic }}</p>
+    </div>
+  </div>
+</div>
+

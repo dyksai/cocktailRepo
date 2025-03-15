@@ -1,0 +1,95 @@
+/* cocktail.component.css
+.cocktail-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  
+  .filters button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffcc00;
+  }
+  
+  .cocktail-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card:hover {
+    background-color: #e0e0e0;
+  }
+   */
+
+   .cocktail-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  
+  .filters button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffcc00;
+  }
+  
+  .cocktail-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card.alcoholic {
+    background-image: url('/assets/alcoholic.jpg');
+  }
+  
+  .card.non-alcoholic {
+    background-image: url('/assets/non-alcoholic.jpg');
+  }
+  
+  .card:hover {
+    background-color: #e0e0e0;
+  }

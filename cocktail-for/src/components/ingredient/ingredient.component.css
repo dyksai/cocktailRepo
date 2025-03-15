@@ -1,0 +1,20 @@
+.ingredient-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .ingredient-container img {
+    width: 300px;
+    height: auto;
+  }
+  
+  .ingredient-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ingredient-container li {
+    padding: 5px;
+    font-size: 18px;
+  }
+  

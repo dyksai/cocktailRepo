@@ -1,0 +1,6 @@
+<div class="home-container">
+  <h1>Welcome to CocktailForYou</h1>
+  <div class="card" *ngFor="let cocktail of cocktails" (click)="navigateToCocktails(cocktail)">
+    <h2>{{ cocktail }}</h2>
+  </div>
+</div>

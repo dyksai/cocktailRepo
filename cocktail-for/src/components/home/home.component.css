@@ -1,0 +1,17 @@
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .card {
+    width: 200px;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+  }
+  .card:hover {
+    background-color: #e0e0e0;
+  }
+  

@@ -1,0 +1,10 @@
+<div class="ingredient-container" *ngIf="cocktails">
+  <h1>{{ cocktails.strDrink }}</h1>
+  <img [src]="cocktails.strDrinkThumb" alt="Drink Image">
+  <h2>Ingredients</h2>
+  <ul>
+    <li *ngFor="let item of ingredients">
+      {{ item.ingredient }} - {{ item.measure }}
+    </li>
+  </ul>
+</div>
