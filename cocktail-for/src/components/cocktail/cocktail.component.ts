@@ -29,6 +29,7 @@ export class CocktailComponent implements OnInit {
   }
 
   applyFilter(type: string): void {
+    console.log(type)
     this.filterType = type;
   }
 

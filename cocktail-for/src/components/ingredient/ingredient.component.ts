@@ -18,11 +18,9 @@ export class IngredientComponent implements OnInit {
     const drinkId = this.route.snapshot.paramMap.get('id');
     if (drinkId) {
       this.cocktailService.getCocktailById(drinkId).subscribe((data: any) => {
-        console.log(data)
         if (data.drinks && data.drinks.length > 0) {
           this.cocktails = data.drinks[0];
           if (this.cocktails) {
-            console.log(this.cocktails);
             for (let i = 1; i <= 15; i++) {
               const ingredient = this.cocktails['strIngredient' + i];
               const measure = this.cocktails['strMeasure' + i];
@@ -31,7 +29,6 @@ export class IngredientComponent implements OnInit {
               }
             }
           }
-          console.log(this.cocktails);
         } else {
           console.error('Unexpected response format:', data);
         }
