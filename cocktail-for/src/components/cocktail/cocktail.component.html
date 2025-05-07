@@ -1,10 +1,13 @@
 <!-- Container for the entire cocktail section -->
 <div class="cocktail-container">
+   <!-- Title of the section -->
   <h1>Cocktails</h1>
+  <!-- Filter buttons to toggle between Alcoholic and Non-Alcoholic cocktails -->
   <div class="filters">
     <button (click)="applyFilter('Alcoholic')">Alcoholic</button>
     <button (click)="applyFilter('Non alcoholic')">Non-Alcoholic</button>
   </div>
+    <!-- Container for displaying the list of cocktail cards -->
   <div class="cocktail-list">
     <div class="card" 
       *ngFor="let cocktail of cocktails" 

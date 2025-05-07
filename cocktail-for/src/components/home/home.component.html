@@ -1,5 +1,8 @@
+<!-- Container for the home page content -->
 <div class="home-container">
+  <!-- Welcome heading for the home page -->
   <h1>Welcome to CocktailForYou</h1>
+  <!-- Loop through the 'cocktails' array to create a card for each cocktail -->
   <div class="card" *ngFor="let cocktail of cocktails" (click)="navigateToCocktails(cocktail)">
     <h2>{{ cocktail }}</h2>
   </div>
