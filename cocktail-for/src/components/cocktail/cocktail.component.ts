@@ -24,7 +24,6 @@ export class CocktailComponent implements OnInit {
 
   fetchCocktails(name: string): void {
     this.cocktailService.getCocktailByName(name).subscribe((data: any) => {
-      console.log(data);
       this.cocktails = data.drinks;
     });
   }
