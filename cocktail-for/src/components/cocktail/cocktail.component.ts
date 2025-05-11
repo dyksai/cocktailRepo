@@ -14,6 +14,7 @@ export class CocktailComponent implements OnInit {
   constructor(private cocktailService: CocktailService , private router: Router,  private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.filterType = 'Alcoholic';
     this.route.queryParams.subscribe(params => {
       const cocktailName = params['name'];
       if (cocktailName) {

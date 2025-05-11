@@ -1,5 +1,4 @@
-/* cocktail.component.css
-.cocktail-container {
+ .cocktail-container {
     text-align: center;
     margin: 20px;
   }
@@ -9,55 +8,20 @@
   }
   
   .filters button {
-    margin: 5px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: #ffcc00;
-  }
-  
-  .cocktail-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    width: 200px;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-    background-color: #f8f8f8;
-    transition: 0.3s;
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card:hover {
-    background-color: #e0e0e0;
-  }
-   */
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffcc00;
+  transition: background-color 0.3s ease;
+}
 
-   .cocktail-container {
-    text-align: center;
-    margin: 20px;
-  }
-  
-  .filters {
-    margin-bottom: 20px;
-  }
-  
-  .filters button {
-    margin: 5px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: #ffcc00;
-  }
+.filters button.active {
+  background-color: #ffa500; /* Darker shade for active button */
+  color: white;
+  font-weight: bold;
+}
+
   
   .cocktail-list {
     display: flex;
