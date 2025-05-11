@@ -11,13 +11,16 @@ export class IngredientComponent implements OnInit {
 
   cocktails: any;
   ingredients: { ingredient: string, measure: string }[] = [];
+  errorMessage: string = '';
+
 
   constructor(private route: ActivatedRoute, private cocktailService: CocktailService) {}
 
   ngOnInit(): void {
-    const drinkId = this.route.snapshot.paramMap.get('id');
-    if (drinkId) {
-      this.cocktailService.getCocktailById(drinkId).subscribe((data: any) => {
+  const drinkId = this.route.snapshot.paramMap.get('id');
+  if (drinkId) {
+    this.cocktailService.getCocktailById(drinkId).subscribe({
+      next: (data: any) => {
         if (data.drinks && data.drinks.length > 0) {
           this.cocktails = data.drinks[0];
           if (this.cocktails) {
@@ -30,9 +33,15 @@ export class IngredientComponent implements OnInit {
             }
           }
         } else {
-          console.error('Unexpected response format:', data);
+          this.errorMessage = 'No cocktail data found.';
         }
-      });
-    }
+      },
+      error: (error) => {
+        console.log('API Error:', error);
+        this.errorMessage = 'Failed to load cocktail data. Please try again later.';
+      }
+    });
   }
+}
+
 }

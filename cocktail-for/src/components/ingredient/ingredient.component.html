@@ -1,12 +1,14 @@
-<!-- Container for displaying the selected cocktail's ingredients -->
-<!-- This block will only render if 'cocktails' data is available -->
-<div class="ingredient-container" *ngIf="cocktails">
-   <!-- Display the name of the cocktail -->
+<!-- Error message -->
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
+
+<!-- Main content -->
+<div class="ingredient-container" *ngIf="cocktails && !errorMessage">
   <h1>{{ cocktails.strDrink }}</h1>
   <img [src]="cocktails.strDrinkThumb" alt="Drink Image">
   <h2>Ingredients</h2>
   <ul>
-    <!-- Loop through each ingredient item and display its name and measurement -->
     <li *ngFor="let item of ingredients">
       {{ item.ingredient }} - {{ item.measure }}
     </li>

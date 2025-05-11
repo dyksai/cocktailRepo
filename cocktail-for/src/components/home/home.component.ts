@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  cocktails = ['Margarita', 'Mojito'];
+  cocktails:string[] = ['Margarita', 'Mojito'];
 
   constructor(private router: Router) {}
 
